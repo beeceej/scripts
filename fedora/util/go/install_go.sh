@@ -29,6 +29,7 @@ unpack() {
     local arch=$2
 
     if [[ -L /usr/local/go || -d /usr/local/go ]]; then
+        echo "Removing Previous Go installation.."
         sudo rm -rf /usr/local/go        
     fi
     sudo mkdir -p /usr/local/.goconfig/$version
