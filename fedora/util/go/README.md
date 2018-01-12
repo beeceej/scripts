@@ -18,7 +18,7 @@ Before downloading install_go will check if the requested version is already ins
 * If there are any issues running a go installation from a symlink, I haven't found any yet
 
 
-# Isn't this similar [gimme](https://github.com/travis-ci/gimme)?
+# Isn't this similar to [gimme](https://github.com/travis-ci/gimme)?
 * yeah... but I wanted to write it myself.
 
 
