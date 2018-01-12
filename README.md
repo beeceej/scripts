@@ -9,3 +9,5 @@ it's likely these are more chaos monkies than utilities... as such run at your o
 # add VSCode yum repos [here](fedora/packages/vscode/add_vscode_repo.sh)
 
 # Install golang [here](fedora/util/go/install_go.sh)
+
+# some cool ps1 stuff you can add for git enabled directories [here] (.ps1)
