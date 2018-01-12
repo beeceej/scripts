@@ -10,4 +10,4 @@ it's likely these are more chaos monkies than utilities... as such run at your o
 
 # Install golang [here](fedora/util/go/install_go.sh)
 
-# some cool ps1 stuff you can add for git enabled directories [here] (.ps1)
+# some cool ps1 stuff you can add for git enabled directories [here](ps1/.ps1)
