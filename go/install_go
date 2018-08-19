@@ -43,7 +43,7 @@ symlink_to_version() {
     local version=$1
 
     echo "linking /usr/local/.goconfig/$version/go -> /usr/local/go"
-    sudo ln -s "/usr/local/.goconfig/$version/go /usr/local/go"
+    sudo ln -s "/usr/local/.goconfig/$version/go" "/usr/local/go"
 }
 
 main() {
