@@ -1,10 +1,9 @@
 #! /bin/bash
-
-TMP_DIR=$HOME/.install_go/$(date +%Y-%m-%d:%s)
-
-GO_HOST_URL_BASE=https://dl.google.com/go/
-
 set -e
+
+readonly TMP_DIR=$HOME/.install_go/$(date +%Y-%m-%d:%s)
+readonly GO_HOST_URL_BASE=https://dl.google.com/go/
+
 setup() {
     mkdir -p "$TMP_DIR"
 }
@@ -14,7 +13,7 @@ cleanup() {
 }
 
 download() {
-    local url=$1
+    declare url=$1
 
     if [[ -d /usr/local/.goconfig/$version/go ]]; then
         echo "version $version already cached, no need to retrieve it again..."
@@ -24,8 +23,7 @@ download() {
 }
 
 unpack() {
-    local version=$1
-    local arch=$2
+    declare version=$1 arch=$2
 
     sudo mkdir -p "/usr/local/.goconfig/$version"
 
@@ -40,15 +38,14 @@ remove_old_install() {
 }
 
 symlink_to_version() {
-    local version=$1
+    declare version=$1
 
     echo "linking /usr/local/.goconfig/$version/go -> /usr/local/go"
     sudo ln -s "/usr/local/.goconfig/$version/go" "/usr/local/go"
 }
 
 main() {
-    local version=$1
-    local arch=$2
+    declare version="$1" arch="$2"
 
     setup
 
